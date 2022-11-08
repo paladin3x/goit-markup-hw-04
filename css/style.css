@@ -332,12 +332,13 @@ ul {
 }
 
 .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   margin-bottom: 30px;
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  width: 270px;
+  height: 120px;
   background-color: #f5f4fa;
   border-radius: 4px;
   border: 1px solid transparent;
@@ -476,24 +477,31 @@ ul {
 .personal-social li:not(:last-child) {
   margin-right: 10px;
 }
-.branded-logo {
-  display: block;
-}
+
 .link-company {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
   border-radius: 4px;
   border: 1px solid #afb1b8;
-
-  padding-left: 32px;
-  padding-right: 32px;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  display: block;
+  color: #afb1b8;
 }
-.branded-logo:hover,
-.branded-logo:focus {
+.link-company:hover,
+.link-company:focus {
   border-color: var(--color-blue);
+  color: var(--color-blue);
+}
+.link-company:hover .branded-logo,
+.link-company:focus .branded-logo {
   fill: var(--color-blue);
 }
+.branded-logo {
+  display: block;
+  fill: currentColor;
+}
+
 /* portfolio body */
 
 .btn-section {
@@ -523,6 +531,8 @@ ul {
 .btn-filter:focus {
   color: var(--color-white);
   background-color: var(--color-blue);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .btn-section li:not(:last-child) {
@@ -584,4 +594,9 @@ ul {
   padding-bottom: 20px;
   padding-left: 24px;
   padding-right: 24px;
+}
+.product-link li:hover,
+.product-link li:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
